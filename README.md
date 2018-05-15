@@ -8,8 +8,7 @@
 **难度系数较低，很适合vue.js/mint-ui刚入门的小伙伴拿来练手**<br>
 **稍微耽搁一点时间的地方在于：mint-ui组件会自带一些原有样式，所以有时候需要找某个元素的时候，往往在自己写的代码中找不到。**<br>
 **解决办法：浏览器中打开项目，F12或者右键检查元素，就可以找到要寻找的目标元素**<br>
-**页面展示：** <br>
-![消息页](https://github.com/5Iris5/wechatview/tree/master/imgs)
-**预览**
+**预览**<br>
+[](https://5iris5.github.io/WeChat/wechat.html)
 
 
