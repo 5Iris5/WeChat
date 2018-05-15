@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>仿微信界面</title>
+		<!--控制页面在移动端不要缩小显示-->
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"/>
+		<!-- 引入样式 -->
+        <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+        <!--引入字体图标库-->
+        <link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+        <style type="text/css">
+        	html{
+        		background-color: #eee;
+        	}
+        	body{
+        		margin:0;
+        		padding:0;
+        	}
+        	.iconfont{
+        		font-size:26px;
+        	}
+        	.mint-cell-text{
+        		padding-left:10px;
+        		position:relative;
+        		top:-5px;
+        	}
+        </style>
+	</head>
+	<body>
+		<div id="app">
+			<mt-tab-container v-model="active">
+				<mt-tab-container-item id="wechat">
+					<mt-cell v-for="(n,index) in 21" is-link>
+						<img slot="icon" src="http://iph.href.lu/60x60" style="float:left;padding:10px 10px 10px 0;">
+						<div slot="title" style="padding-top:20px;">
+							<div style="display:inline-block">用户{{index+1}}</div>
+							<div style="font-size:12px;color:#aaa;padding:7px 0">你有{{index+1}}条信息</div>
+						</div>
+					</mt-cell>
+				</mt-tab-container-item>
+				<mt-tab-container-item id="contacts">
+					<mt-index-list>
+						<mt-index-section v-for="i in 26" :index="String.fromCharCode((64+i))">
+							<mt-cell :title="String.fromCharCode((64+i))+'lisa'"></mt-cell>
+							<mt-cell :title="String.fromCharCode((64+i))+'mdan'"></mt-cell>
+							<mt-cell :title="String.fromCharCode((64+i))+'ustin'"></mt-cell>
+						</mt-index-section>
+					</mt-index-list>
+				</mt-tab-container-item>
+				<mt-tab-container-item id="find">
+					<div style="margin-top:15px">
+						<mt-cell title="朋友圈" is-link>
+							<span slot="icon" class="iconfont icon-pengyouquan" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+					<div style="margin-top:15px">
+						<mt-cell title="扫一扫" is-link>
+							<span slot="icon" class="iconfont icon-saoyisao" style="color:dodgerblue"></span>
+						</mt-cell>
+						<mt-cell title="摇一摇" is-link>
+							<span slot="icon" class="iconfont icon-weixinyaoyiyaoicon" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+					<div style="margin-top:15px">
+						<mt-cell title="附近的人" is-link>
+							<span slot="icon" class="iconfont icon-fujinderen1" style="color:dodgerblue"></span>
+						</mt-cell>
+						<mt-cell title="漂流瓶" is-link>
+							<span slot="icon" class="iconfont icon-12" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+					<div style="margin-top:15px">
+						<mt-cell title="购物" is-link>
+							<span slot="icon" class="iconfont icon-gouwu" style="color:dodgerblue"></span>
+						</mt-cell>
+						<mt-cell title="游戏" is-link>
+							<span slot="icon" class="iconfont icon-youxi" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+					<div style="margin-top:15px">
+						<mt-cell title="小程序" is-link>
+							<span slot="icon" class="iconfont icon-xiaochengxu" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+				</mt-tab-container-item>
+				<mt-tab-container-item id="my">
+					<div style="margin-top:15px">
+						<mt-cell>
+							<img slot="icon" src="http://iph.href.lu/60x60" width="60" height="60" style='float:left;padding:10px 10px 10px 0;'>
+							<div slot="title" style="padding-top:20px">
+								<div style="display:inline-block">Iris</div>
+								<div style='font-size:12px;color:#aaa;padding:7px 0'>微信号:xxxxxx</div>
+							</div>
+						</mt-cell>
+					</div>
+					<div style="margin-top:15px">
+						<mt-cell title="钱包" is-link>
+							<span slot="icon" class="iconfont icon-qianbao" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+					<div style="margin-top:15px">
+						<mt-cell title="收藏" is-link>
+							<span slot="icon" class="iconfont icon-weixinshoucang" style="color:dodgerblue"></span>
+						</mt-cell>
+						<mt-cell title="相册" is-link>
+							<span slot="icon" class="iconfont icon-xiangce" style="color:dodgerblue"></span>
+						</mt-cell>
+						<mt-cell title="卡包" is-link>
+							<span slot="icon" class="iconfont icon-qiabao" style="color:dodgerblue"></span>
+						</mt-cell>
+						<mt-cell title="表情" is-link>
+							<span slot="icon" class="iconfont icon-biaoqing" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+					<div style="margin-top:15px">
+						<mt-cell title="设置" is-link>
+							<span slot="icon" class="iconfont icon-shezhi" style="color:dodgerblue"></span>
+						</mt-cell>
+					</div>
+				</mt-tab-container-item>
+			</mt-tab-container>
+			<mt-tabbar v-model="active" fixed>
+				<mt-tab-item id="wechat">
+					<span slot="icon" class="iconfont icon-icon--"></span>
+					<span>微信</span>
+				</mt-tab-item>
+				<mt-tab-item id="contacts">
+					<span slot="icon" class="iconfont icon-tongxunlu"></span>
+					<span>通讯录</span>
+				</mt-tab-item>
+				<mt-tab-item id="find">
+					<span slot="icon" class="iconfont icon-faxian"></span>
+					<span>发现</span>
+				</mt-tab-item>
+				<mt-tab-item id="my">
+					<span slot="icon" class="iconfont icon-wode"></span>
+					<span>我</span>
+				</mt-tab-item>
+			</mt-tabbar>
+		</div>
+		<script src="https://cdn.bootcss.com/vue/2.5.14/vue.min.js"></script>
+		<!-- 引入组件库 -->
+        <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+        <script type="text/javascript">
+        	new Vue({
+        		el:'#app',
+        		data:{
+        			active:'wechat'
+        		}
+        	})
+        </script>
+	</body>
+</html>
