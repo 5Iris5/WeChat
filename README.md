@@ -2,9 +2,9 @@
   <h1>仿微信界面效果</h1>
 </div>
 
-- 技术栈: vue.js+mint-ui
-- 推荐开发工具: [HBuilder](http://www.dcloud.io/)
-- 阿里巴巴矢量图标库: [Iconfont](http://www.iconfont.cn/home/index)
+技术栈: vue.js+mint-ui
+推荐开发工具: [HBuilder](http://www.dcloud.io/)
+阿里巴巴矢量图标库: [Iconfont](http://www.iconfont.cn/home/index)
 
 推荐阅读资料:
 - [vue.js](https://cn.vuejs.org/v2/guide/syntax.html)  模板语法章节
